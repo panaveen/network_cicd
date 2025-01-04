@@ -25,7 +25,8 @@ jobs:
 
       - name: Run Python container and output Python version
         run: |
-          docker run --rm python:3.10.12 python --version
+          pip install nornir_utils nornir_netmiko
+          docker run --rm python:3.10.12 pip freeze 
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
