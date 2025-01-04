@@ -18,7 +18,7 @@ on:
 
 jobs:
   conatiner-test:
-    runs-on: github-action
+    runs-on: github_action
     steps:
       - name: Pull Python Docker image
         run: docker pull python:3.10.12
