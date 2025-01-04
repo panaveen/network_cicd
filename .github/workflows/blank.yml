@@ -19,11 +19,11 @@ on:
 jobs:
   conatiner-test:
     runs-on: redhat
-    container: 
-      image: python:3.10.12
+    container: python:3.10.12
     steps:
       - name: check python version
-        run: python --version
+        run: |
+          docker run --rm python:3.10.12 python --version
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
