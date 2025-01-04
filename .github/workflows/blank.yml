@@ -22,7 +22,8 @@ jobs:
     container: 
       image: python:3.10.12
     steps:
-      - run: python --version
+      - name: check python version
+        run: python --version
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
