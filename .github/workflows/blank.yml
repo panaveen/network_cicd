@@ -17,9 +17,10 @@ on:
 #define stages
 
 jobs:
-  build:
+  conatiner-test:
     runs-on: redhat
-    container: python:3.10.12
+    container: 
+      image: python:3.10.12
     steps:
       - run: python --version
 #jobs:
