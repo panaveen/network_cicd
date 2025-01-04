@@ -19,11 +19,13 @@ on:
 jobs:
   conatiner-test:
     runs-on: redhat
-    container: python:3.10.12
     steps:
-      - name: check python version
+      - name: Pull Python Docker image
+        run: docker pull python:3.9
+
+      - name: Run Python container and output Python version
         run: |
-          docker run --rm python:3.10.12 python --version
+          docker run --rm python:3.9 python --version
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
