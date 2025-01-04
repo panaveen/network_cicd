@@ -21,11 +21,11 @@ jobs:
     runs-on: redhat
     steps:
       - name: Pull Python Docker image
-        run: docker pull python:3.9
+        run: docker pull python:3.10.12
 
       - name: Run Python container and output Python version
         run: |
-          docker run --rm python:3.9 python --version
+          docker run --rm python:3.10.12 python --version
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
