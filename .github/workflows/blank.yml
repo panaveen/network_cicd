@@ -19,10 +19,9 @@ on:
 jobs:
   conatiner-test:
     runs-on: github_action
-    container: python:3.10.12
     steps:
-      #- name: Pull Python Docker image
-        #run: docker pull python:3.10.12
+      - name: Pull Python Docker image
+        run: docker pull python:3.10.12
 
       - name: Run Python container and output Python version
         run: |
