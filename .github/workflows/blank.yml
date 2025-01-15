@@ -19,9 +19,11 @@ on:
 jobs:
   conatiner-test:
     runs-on: self-hosted
+    container:
+      image: python:3.10.12
     steps:
       - name: Test
-        run: cat /etc/redhat-release
+        run: python -v
 
       #- name: Run Python container and output Python version
         #run: |
