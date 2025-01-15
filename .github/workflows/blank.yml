@@ -19,12 +19,13 @@ on:
 jobs:
   conatiner-test:
     runs-on: self-hosted
-    container:
-      image: python:3.10.12
     steps:
-      - name: Test
-        run: python -v
+      - name: Pull Python Docker image
+        run: docker pull python:3.10.12
 
+      - name: Run Python container and output Python version
+        run: |
+          docker run --rm python:3.10.12 python -v
       #- name: Run Python container and output Python version
         #run: |
           #docker run --rm python:3.10.12 pip freeze
