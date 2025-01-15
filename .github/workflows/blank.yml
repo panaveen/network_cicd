@@ -21,11 +21,11 @@ jobs:
     runs-on: github_action
     steps:
       - name: Pull Python Docker image
-        run: docker pull python:3.10.12
+        run: cat /etc/redhat-release
 
-      - name: Run Python container and output Python version
-        run: |
-          docker run --rm python:3.10.12 pip freeze
+      #- name: Run Python container and output Python version
+        #run: |
+          #docker run --rm python:3.10.12 pip freeze
 #jobs:
   # This workflow contains a single job called "build"
   #Test:
