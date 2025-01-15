@@ -18,7 +18,7 @@ on:
 
 jobs:
   conatiner-test:
-    runs-on: github_action
+    runs-on: self-hosted
     steps:
       - name: Test
         run: cat /etc/redhat-release
