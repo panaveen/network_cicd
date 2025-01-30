@@ -1,0 +1,8 @@
+name: test
+on: push
+jobs:
+  test-self-hosted:
+    runs-on: self-hosted
+    steps:
+      - name: check the OS
+      - run: echo /etc/os-release
