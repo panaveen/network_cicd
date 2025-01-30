@@ -13,7 +13,7 @@ def init_nornir():
     """
     Initialize Nornir object
     """
-    nr = InitNornir(config_file="config.yaml")
+    nr = InitNornir(config_file="config.yml")
     nr.inventory.defaults.username = username
     nr.inventory.defaults.password = password
     return nr
