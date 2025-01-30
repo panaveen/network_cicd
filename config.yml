@@ -7,9 +7,9 @@ runner:
 inventory:
   plugin: "SimpleInventory"
   options:
-    host_file: "./inventory/hosts.yaml"
-    group_file: "./inventory/groups.yaml"
-    defaults_file: "./inventory/defaults.yaml"
+    host_file: "./inventory/hosts.yml"
+    group_file: "./inventory/groups.yml"
+    defaults_file: "./inventory/defaults.yml"
 
 ssh:
   config_file: ~/.ssh/conf.d/jump_config
