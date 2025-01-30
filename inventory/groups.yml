@@ -1,0 +1,14 @@
+juniper:
+  connection_options:
+    scrapli:
+      extras:
+        timeout_transport: 600
+        ssh_config_file: true
+        auth_strict_key: false
+    netmiko:
+      extras:
+        # use_keys: true
+        # key_file: ~/.ssh/id_rsa
+        conn_timeout: 20
+        allow_agent: True
+        ssh_config_file: ~/.ssh/conf.d/jump_config
