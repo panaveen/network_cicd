@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: check out repository code
         uses: actions/checkout@v4
-      - run: source /home/naveen/Documents/junos_venv/bin/activate
+      - run: pip3 install nornir_utils nornir_netmiko nornir_scrapli load-dotenv
       - run: python3 nr_test.py
       
