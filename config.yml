@@ -1,0 +1,22 @@
+---
+runner:
+  plugin: threaded
+  options:
+    num_workers: 20
+
+inventory:
+  plugin: "SimpleInventory"
+  options:
+    host_file: "./inventory/hosts.yaml"
+    group_file: "./inventory/groups.yaml"
+    defaults_file: "./inventory/defaults.yaml"
+
+ssh:
+  config_file: ~/.ssh/conf.d/jump_config
+  # config_file: ~/.ssh/config
+
+logging:
+  enabled: True
+  level: DEBUG
+  log_file: nornir.log
+  to_console: false
