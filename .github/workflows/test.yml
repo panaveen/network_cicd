@@ -1,11 +1,15 @@
 name: test
 on: push
 jobs:
-  test-self-hosted:
+  build:
     runs-on: self-hosted
     steps:
       - name: check out repository code
         uses: actions/checkout@v4
       - run: pip3 install nornir_utils nornir_netmiko nornir_scrapli load-dotenv
-      - run: python3 nr_test.py
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: run the script
+        run: python3 nr_test.py
       
