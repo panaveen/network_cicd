@@ -8,6 +8,7 @@ jobs:
         uses: actions/checkout@v4
       - run: pip3 install nornir_utils nornir_netmiko nornir_scrapli load-dotenv
   deploy:
+    needs: build
     runs-on: self-hosted
     steps:
       - name: run the script
