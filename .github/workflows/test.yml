@@ -4,5 +4,8 @@ jobs:
   test-self-hosted:
     runs-on: self-hosted
     steps:
-      - name: check the OS
-        run: cat /etc/os-release
+      - name: check out repository code
+        uses: actions/checkout@v4
+      - run: source /home/naveen/Documents/junos_venv/bin/activate
+      - run: python -V
+      
