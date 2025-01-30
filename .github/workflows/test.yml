@@ -7,5 +7,5 @@ jobs:
       - name: check out repository code
         uses: actions/checkout@v4
       - run: source /home/naveen/Documents/junos_venv/bin/activate
-      - run: python -V
+      - run: python3 nr_test.py
       
