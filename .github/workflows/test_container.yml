@@ -14,5 +14,9 @@ jobs:
     container:
       image: python:3.10.12
     steps:
-      - name: get python version
-        run: python -V
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: install dependencies
+        run: pip install nornir_utils nornir_netmiko nornir_scrapli load-dotenv
+      - name: run the script
+        run: python3 nr_test.py
