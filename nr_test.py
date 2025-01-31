@@ -24,7 +24,7 @@ def main():
     starting_time = time()
     result = nr.run(
         task=send_command,
-        command="show version"
+        command="show chassis hardware"
     )
     print_result(result) 
     print ('\n---- End elapsed time=', time() - starting_time)
