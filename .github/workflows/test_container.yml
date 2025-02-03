@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: docker
     container:
       image: python:3.10.12
     steps:
